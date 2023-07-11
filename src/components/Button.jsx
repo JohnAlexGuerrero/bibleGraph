@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import {Link} from "react-router-dom"
 
-const Button = ({text, onClick}) => {
+const Button = ({slug, text, onClick}) => {
     
   return (
-    <button onClick={onClick}>
-        {text}
-    </button>
+    <Link to={`/books/${slug}`} onClick={onClick}>
+      {text}
+    </Link>
   )
 }
 
